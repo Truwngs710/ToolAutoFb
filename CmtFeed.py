@@ -52,6 +52,8 @@ while True:
     time.sleep(1)
     find_and_click(make_path('img\\ImgCmtFeed\\ok.png'))
     time.sleep(1)
+    find_and_click(make_path('img\\ImgCmtFeed\\closemes.png'))
+    time.sleep(1)
     pyautogui.scroll(-2000)
     time.sleep(2)
     find_and_click(make_path('img\\ImgCmtFeed\\cmt.png'))
