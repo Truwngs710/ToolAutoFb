@@ -11,7 +11,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 def make_path(path):
     return os.path.join(script_dir, path)
 
-def find_and_click(image_path, confidence=0.90):
+def find_and_click(image_path, confidence=0.97):
     filename = image_path.split('\\')[-1]
     try:
         location = pyautogui.locateCenterOnScreen(image_path, confidence=confidence)
