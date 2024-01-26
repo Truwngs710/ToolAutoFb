@@ -12,7 +12,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 def make_path(path):
     return os.path.join(script_dir, path)
 
-def find_and_click(image_path, confidence=0.97):
+def find_and_click(image_path, confidence=0.96):
     filename = image_path.split('\\')[-1]
     try:
         location = pyautogui.locateCenterOnScreen(image_path, confidence=confidence)
@@ -88,7 +88,7 @@ while True:
     else:
         find_and_click(make_path('img\\ImgCmtFeed\\closepost.png'))
         time.sleep(2)
-        pyautogui.scroll(-2000)
+        pyautogui.scroll(-1500)
         time.sleep(3)
         
 
