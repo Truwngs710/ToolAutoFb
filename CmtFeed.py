@@ -57,7 +57,7 @@ while True:
     pyautogui.scroll(-2000)
     time.sleep(2)
     find_and_click(make_path('img\\ImgCmtFeed\\cmt.png'))
-    time.sleep(1)
+    time.sleep(6)
     if find_and_click(make_path('img\\ImgCmtFeed\\writecmt.png')):
         time.sleep(3) 
         random_content = get_random_content_value(make_path('csv\\Thuong - link aff.csv'))
@@ -66,9 +66,9 @@ while True:
         if random_content:
             pyautogui.hotkey('ctrl', 'v')
             print('paste data')
-            time.sleep(8)
+            time.sleep(6)
             pyautogui.press('enter')
-            time.sleep(12)
+            time.sleep(8)
             find_and_click(make_path('img\\ImgCmtFeed\\closepost.png'))
             time.sleep(3)
             print(f"Iteration: {iteration}")
