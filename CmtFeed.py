@@ -8,6 +8,7 @@ import pyperclip
 
 global count
 script_dir = os.path.dirname(os.path.abspath(__file__))
+
 def make_path(path):
     return os.path.join(script_dir, path)
 
@@ -47,14 +48,16 @@ def get_random_content_value(csv_file_path, target_column_name='content', csv_en
 iteration = 1  
 
 while True:
-    find_and_click(make_path('img\\ImgCmtReel\\close.png'))
+    find_and_click(make_path('img\\ImgCmtFeed\\closecall.png'))
     time.sleep(1)
-    find_and_click(make_path('img\\ImgCmtReel\\closecall.png'))
+    find_and_click(make_path('img\\ImgCmtFeed\\ok.png'))
     time.sleep(1)
-    find_and_click(make_path('img\\ImgCmtReel\\like.png'))
+    pyautogui.scroll(-2000)
+    time.sleep(2)
+    find_and_click(make_path('img\\ImgCmtFeed\\cmt.png'))
     time.sleep(1)
-    if find_and_click(make_path('img\\ImgCmtReel\\cmt.png')):
-        time.sleep(3)  
+    if find_and_click(make_path('img\\ImgCmtFeed\\writecmt.png')):
+        time.sleep(3) 
         random_content = get_random_content_value(make_path('csv\\Thuong - link aff.csv'))
         pyperclip.copy(random_content)
         time.sleep(3)
@@ -63,12 +66,12 @@ while True:
             print('paste data')
             time.sleep(8)
             pyautogui.press('enter')
-            time.sleep(12) 
-            find_and_click(make_path('img\\ImgCmtReel\\next.png'))
+            time.sleep(12)
+            find_and_click(make_path('img\\ImgCmtFeed\\closepost.png'))
             time.sleep(3)
             print(f"Iteration: {iteration}")
             iteration += 1
-            if iteration >= 6: 
+            if iteration >= 3: 
                 pyautogui.keyDown('alt')
                 time.sleep(0.5)
                 for _ in range(3):
@@ -77,8 +80,13 @@ while True:
                 pyautogui.keyUp('alt')
                 time.sleep(0.5)
                 iteration = 1 
+
         else:
             print("Skipping typing and pressing Enter as no random content is available.")
     else:
-        find_and_click(make_path('img\\ImgCmtReel\\next.png'))
+        find_and_click(make_path('img\\ImgCmtFeed\\closepost.png'))
+        time.sleep(2)
+        pyautogui.scroll(-2000)
         time.sleep(3)
+        
+
