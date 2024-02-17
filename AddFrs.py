@@ -86,6 +86,7 @@ def detect_x_btn():
         print(f"X Button: {image_positions}")
         pyautogui.moveTo(image_positions[0], image_positions[1])
         pyautogui.click()
+        time.sleep(2.5)
     
 while True:
     detect_ok_btn()
