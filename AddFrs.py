@@ -10,7 +10,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 image_path = os.path.join(script_dir, 'img\\ImgAddFrs\\add.png')
 countNotFound = 0
 
-def find_image_on_screen(template_path, threshold=0.92):
+def find_image_on_screen(template_path, threshold=0.95):
     template = cv2.imread(template_path, 0)
     screenshot = cv2.cvtColor(np.array(pyautogui.screenshot()), cv2.COLOR_RGB2BGR)
     screenshot_gray = cv2.cvtColor(screenshot, cv2.COLOR_BGR2GRAY)
@@ -46,7 +46,7 @@ def auto_click_add():
                 time.sleep(1)
                 countNotFound = 0
 
-def detect_image(template_path, threshold=0.92):
+def detect_image(template_path, threshold=0.95):
     template = cv2.imread(template_path, 0)
     screenshot = cv2.cvtColor(np.array(pyautogui.screenshot()), cv2.COLOR_RGB2BGR)
     screenshot_gray = cv2.cvtColor(screenshot, cv2.COLOR_BGR2GRAY)
