@@ -29,22 +29,21 @@ def auto_click_on_centers(centers):
     for center in centers:
         pyautogui.moveTo(center[0], center[1])
         pyautogui.click()
-        time.sleep(random.choice([0.15]))
+        time.sleep(random.choice([0.25, 0.5]))
+        detect_ok_btn()
+        detect_x_btn()
+        time.sleep(1)
+    pyautogui.scroll(800)
+    
 
 def auto_click_add():
-    global countNotFound  
     centers = find_image_on_screen(image_path)
     if centers:
             print(f"Position: {centers}")
             auto_click_on_centers(centers)
     else:
             print(f"Image '1.png' not found.")
-            countNotFound += 1
-            print(countNotFound)
-            if countNotFound > 8:
-                keyboard.press_and_release('ctrl+w')
-                time.sleep(1)
-                countNotFound = 0
+            
 
 def detect_image(template_path, threshold=0.95):
     template = cv2.imread(template_path, 0)
@@ -70,14 +69,8 @@ def detect_ok_btn():
         print(f"OK Button: {image_positions}")
         pyautogui.moveTo(image_positions[0], image_positions[1])
         pyautogui.click()
-        pyautogui.scroll(800)
-        time.sleep(0.8)
-        auto_click_add()
-    else:
-        print("No OK button!!!")
-        pyautogui.scroll(800)
-        time.sleep(0.8)
-        auto_click_add()
+        time.sleep(1)
+  
 
 def detect_x_btn():
     template_path = os.path.join(script_dir, 'img\\ImgAddFrs\\closecall.png')
@@ -86,9 +79,7 @@ def detect_x_btn():
         print(f"X Button: {image_positions}")
         pyautogui.moveTo(image_positions[0], image_positions[1])
         pyautogui.click()
-        time.sleep(2.5)
+        time.sleep(1)
     
 while True:
-    detect_ok_btn()
-    detect_x_btn()
-    time.sleep(2.2)
+    auto_click_add()
