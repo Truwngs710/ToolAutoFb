@@ -34,6 +34,7 @@ def auto_click_on_centers(centers):
         detect_x_btn()
         time.sleep(1)
     pyautogui.scroll(800)
+    time.sleep(0.5)
     
 
 def auto_click_add():
