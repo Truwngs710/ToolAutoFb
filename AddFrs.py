@@ -43,6 +43,8 @@ def auto_click_add():
             auto_click_on_centers(centers)
     else:
             print(f"Image '1.png' not found.")
+            time.sleep(5)
+
             
 
 def detect_image(template_path, threshold=0.95):
