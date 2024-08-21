@@ -23,7 +23,7 @@ def find_image_on_screen(template_path, threshold=0.95):
         center_x = loc[0] + w // 2
         center_y = loc[1] + h // 2
         centers.append((center_x, center_y))
-    return centerscenters[::2]
+    return centers[::2]
 
 def auto_click_on_centers(centers):
     for center in centers:
