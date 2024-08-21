@@ -29,12 +29,12 @@ def auto_click_on_centers(centers):
     for center in centers:
         pyautogui.moveTo(center[0], center[1])
         pyautogui.click()
-        time.sleep(random.choice([0.75, 1.5]))
+        time.sleep(random.choice([0.75, 1.5, 2.25]))
         detect_ok_btn()
         detect_x_btn()
         time.sleep(1)
     pyautogui.scroll(800)
-    time.sleep(0.5)
+    time.sleep(1)
     
 
 def auto_click_add():
@@ -44,7 +44,7 @@ def auto_click_add():
             auto_click_on_centers(centers)
     else:
             print(f"Image '1.png' not found.")
-            time.sleep(5)
+            time.sleep(15)
 
             
 
