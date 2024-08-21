@@ -23,13 +23,13 @@ def find_image_on_screen(template_path, threshold=0.95):
         center_x = loc[0] + w // 2
         center_y = loc[1] + h // 2
         centers.append((center_x, center_y))
-    return centers
+    return centerscenters[::2]
 
 def auto_click_on_centers(centers):
     for center in centers:
         pyautogui.moveTo(center[0], center[1])
         pyautogui.click()
-        time.sleep(random.choice([0.25, 0.5]))
+        time.sleep(random.choice([0.75, 1.5]))
         detect_ok_btn()
         detect_x_btn()
         time.sleep(1)
