@@ -31,7 +31,7 @@ def auto_click_on_centers(centers):
         pyautogui.click()
         time.sleep(random.choice([0.1]))
         time.sleep(0.2)
-    pyautogui.scroll(300)
+    pyautogui.scroll(400)
     time.sleep(0.2)
     
 
