@@ -48,17 +48,18 @@ def get_random_content_value(csv_file_path, target_column_name='A', csv_encoding
 iteration = 1  
 
 while True:
-    find_and_click(make_path('img\\ImgCmtFeed\\closecall.png'))
-    time.sleep(1)
-    find_and_click(make_path('img\\ImgCmtFeed\\ok.png'))
-    time.sleep(1)
-    find_and_click(make_path('img\\ImgCmtFeed\\like.png'))
-    time.sleep(2)
+    
     
     random_number = random.randint(1, 2)
     print(random_number)
 
     if random_number == 2:
+        find_and_click(make_path('img\\ImgCmtFeed\\closecall.png'))
+        time.sleep(1)
+        find_and_click(make_path('img\\ImgCmtFeed\\ok.png'))
+        time.sleep(1)
+        find_and_click(make_path('img\\ImgCmtFeed\\like.png'))
+        time.sleep(2)
         find_and_click(make_path('img\\ImgCmtFeed\\cmt1.png'))
         time.sleep(1)
         find_and_click(make_path('img\\ImgCmtFeed\\cmt2.png'))
