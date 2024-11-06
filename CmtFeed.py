@@ -48,8 +48,7 @@ def get_random_content_value(csv_file_path, target_column_name='A', csv_encoding
 iteration = 1  
 
 while True:
-    
-    
+    iteration = iteration+1
     random_number = random.randint(1, 3)
     print(random_number)
 
@@ -75,4 +74,21 @@ while True:
         
     pyautogui.scroll(-2000)
     time.sleep(2)
+    if iteration == 100: 
+        pyautogui.keyDown('alt')
+        time.sleep(0.5)
+        pyautogui.press('tab')
+        time.sleep(0.5)
+        pyautogui.press('tab')
+        time.sleep(0.5)
+        pyautogui.press('tab')
+        time.sleep(0.5)
+        pyautogui.press('tab')
+        time.sleep(0.5)
+        pyautogui.press('tab')
+        time.sleep(0.5)
+        pyautogui.press('tab')
+        time.sleep(0.5)
+        pyautogui.keyUp('alt')
+        iteration= 1
 
