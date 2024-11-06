@@ -54,41 +54,26 @@ while True:
     time.sleep(1)
     find_and_click(make_path('img\\ImgCmtFeed\\closemes.png'))
     time.sleep(1)
-    pyautogui.scroll(-2000)
+    find_and_click(make_path('img\\ImgCmtFeed\\like.png'))
     time.sleep(2)
-    find_and_click(make_path('img\\ImgCmtFeed\\cmt.png'))
-    time.sleep(6)
-    if find_and_click(make_path('img\\ImgCmtFeed\\writecmt.png')):
-        time.sleep(3) 
-        random_content = get_random_content_value(make_path('csv\\Thuong - link aff.csv'))
+    
+    random_number = random.randint(1, 3)
+    print(random_number)
+
+    if random_number == 3:
+        find_and_click(make_path('img\\ImgCmtFeed\\cmt1.png'))
+        time.sleep(1)
+        find_and_click(make_path('img\\ImgCmtFeed\\cmt2.png'))
+        time.sleep(1)
+        random_content = get_random_content_value(make_path('csv\\data.csv'))
         pyperclip.copy(random_content)
         time.sleep(3)
-        if random_content:
-            pyautogui.hotkey('ctrl', 'v')
-            print('paste data')
-            time.sleep(6)
-            pyautogui.press('enter')
-            time.sleep(8)
-            find_and_click(make_path('img\\ImgCmtFeed\\closepost.png'))
-            time.sleep(3)
-            print(f"Iteration: {iteration}")
-            iteration += 1
-            if iteration >= 3: 
-                pyautogui.keyDown('alt')
-                time.sleep(0.5)
-                for _ in range(3):
-                    pyautogui.press('tab')
-                    time.sleep(0.5)
-                pyautogui.keyUp('alt')
-                time.sleep(0.5)
-                iteration = 1 
-
-        else:
-            print("Skipping typing and pressing Enter as no random content is available.")
-    else:
-        find_and_click(make_path('img\\ImgCmtFeed\\closepost.png'))
-        time.sleep(2)
-        pyautogui.scroll(-1500)
+        pyautogui.hotkey('ctrl', 'v')
+        print('paste data')
+        time.sleep(6)
+        pyautogui.press('enter')
         time.sleep(3)
         
+    pyautogui.scroll(-2000)
+    time.sleep(2)
 
