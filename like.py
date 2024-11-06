@@ -7,7 +7,7 @@ import time
 import keyboard
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-image_path = os.path.join(script_dir, 'img\\dltfrs\\huy.png')
+image_path = os.path.join(script_dir, 'img\\like\\like.png')
 countNotFound = 0
 
 def find_image_on_screen(template_path, threshold=0.95):
@@ -29,10 +29,10 @@ def auto_click_on_centers(centers):
     for center in centers:
         pyautogui.moveTo(center[0], center[1])
         pyautogui.click()
-        time.sleep(random.choice([0.1]))
-        time.sleep(0.2)
-    pyautogui.scroll(400)
-    time.sleep(0.2)
+        time.sleep(random.choice([3]))
+        time.sleep(3)
+    pyautogui.scroll(-1200)
+    time.sleep(3)
     
 
 def remove_frs_req():
@@ -42,7 +42,9 @@ def remove_frs_req():
             auto_click_on_centers(centers)
     else:
             print(f"Image not found.")
-            time.sleep(2)
+            pyautogui.scroll(-1200)
+            time.sleep(3)
+
 
             
 
