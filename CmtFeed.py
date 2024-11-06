@@ -27,7 +27,7 @@ def find_and_click(image_path, confidence=0.96):
         print("Not found {}".format(filename))
         return False
 
-def get_random_content_value(csv_file_path, target_column_name='content', csv_encoding='utf-8'):
+def get_random_content_value(csv_file_path, target_column_name='A', csv_encoding='utf-8'):
     try:
         with open(csv_file_path, 'r', encoding=csv_encoding) as file:
             csv_reader = csv.DictReader(file)
@@ -52,8 +52,6 @@ while True:
     time.sleep(1)
     find_and_click(make_path('img\\ImgCmtFeed\\ok.png'))
     time.sleep(1)
-    find_and_click(make_path('img\\ImgCmtFeed\\closemes.png'))
-    time.sleep(1)
     find_and_click(make_path('img\\ImgCmtFeed\\like.png'))
     time.sleep(2)
     
@@ -64,6 +62,10 @@ while True:
         find_and_click(make_path('img\\ImgCmtFeed\\cmt1.png'))
         time.sleep(1)
         find_and_click(make_path('img\\ImgCmtFeed\\cmt2.png'))
+        time.sleep(1)
+        find_and_click(make_path('img\\ImgCmtFeed\\cmt3.png'))
+        time.sleep(1)
+        find_and_click(make_path('img\\ImgCmtFeed\\cmt4.png'))
         time.sleep(1)
         random_content = get_random_content_value(make_path('csv\\data.csv'))
         pyperclip.copy(random_content)
