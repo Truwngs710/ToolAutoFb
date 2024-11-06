@@ -50,7 +50,7 @@ iteration = 1
 while True:
     
     
-    random_number = random.randint(1, 3)
+    random_number = random.randint(1, 2)
     print(random_number)
 
     if random_number == 2:
@@ -60,18 +60,22 @@ while True:
         time.sleep(1)
         find_and_click(make_path('img\\ImgCmtFeed\\like.png'))
         time.sleep(2)
-        find_and_click(make_path('img\\ImgCmtFeed\\incmt.png'))
-        time.sleep(7)
+        find_and_click(make_path('img\\ImgCmtFeed\\cmt1.png'))
+        time.sleep(1)
+        find_and_click(make_path('img\\ImgCmtFeed\\cmt2.png'))
+        time.sleep(1)
+        find_and_click(make_path('img\\ImgCmtFeed\\cmt3.png'))
+        time.sleep(1)
+        find_and_click(make_path('img\\ImgCmtFeed\\cmt4.png'))
+        time.sleep(1)
         random_content = get_random_content_value(make_path('csv\\data.csv'))
         pyperclip.copy(random_content)
         time.sleep(3)
         pyautogui.hotkey('ctrl', 'v')
         print('paste data')
-        time.sleep(4)
+        time.sleep(6)
         pyautogui.press('enter')
-        time.sleep(4)
-        find_and_click(make_path('img\\ImgCmtFeed\\clspost.png'))
-        time.sleep(5)
+        time.sleep(3)
         
     pyautogui.scroll(-2000)
     time.sleep(2)
