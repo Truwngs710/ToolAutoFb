@@ -87,8 +87,6 @@ while True:
         time.sleep(0.5)
         pyautogui.press('tab')
         time.sleep(0.5)
-        pyautogui.press('tab')
-        time.sleep(0.5)
         pyautogui.keyUp('alt')
         iteration= 1
 
