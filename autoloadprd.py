@@ -88,6 +88,7 @@ def main_loop():
         print(f"[{iteration}] Copy link: {current_content}")
 
         # Thực hiện các hành động do bạn định nghĩa
+        time.sleep(2)
         find_and_click(make_path('img/autocty/newtab.png'))
         time.sleep(2)
         # Paste nội dung
@@ -102,8 +103,12 @@ def main_loop():
         time.sleep(3)
         find_and_click(make_path('img/autocty/cate.png'))
         time.sleep(3)
-        find_and_click(make_path('img/autocty/choncate.png'))
+        # find_and_click(make_path('img/autocty/ts1.png'))
+        # time.sleep(3)
+        find_and_click(make_path('img/autocty/sws1.png'))
         time.sleep(3)
+        pyautogui.scroll(-1200)
+        time.sleep(2)
         find_and_click(make_path('img/autocty/save.png'))
         time.sleep(6)
         pyautogui.hotkey('ctrl', 'w')
