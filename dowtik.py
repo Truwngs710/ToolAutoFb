@@ -27,38 +27,37 @@ def find_and_click(image_path, confidence=0.97):
         return False
     
 while True:
-    
-    # next reel
-    time.sleep(1)
-    pyautogui.click(x=1500, y=500)
-    time.sleep(2)
-
     # lấy URL
-    find_and_click(make_path('img\\downreel\\link.png'))
+    find_and_click(make_path('img\\downtik\\link.png'))
     time.sleep(1)
     pyautogui.hotkey('ctrl', 'c')
     time.sleep(1)
 
     # Chuyển tới tab download
-    find_and_click(make_path('img\\downreel\\downloadweb.png'))
+    find_and_click(make_path('img\\downtik\\webdown.png'))
     time.sleep(1)
 
     # Nhập URL và tải video
-    find_and_click(make_path('img\\downreel\\input.png'))
+    find_and_click(make_path('img\\downtik\\pastelink.png'))
     time.sleep(1)
     pyautogui.hotkey('ctrl', 'v')
     time.sleep(1)
 
-    find_and_click(make_path('img\\downreel\\download.png'))
-    time.sleep(6)
-    find_and_click(make_path('img\\downreel\\dow.png'))
+    find_and_click(make_path('img\\downtik\\down1.png'))
+    time.sleep(3)
+    find_and_click(make_path('img\\downtik\\down2.png'))
     time.sleep(1)
-    find_and_click(make_path('img\\downreel\\closeads.png'))
+    find_and_click(make_path('img\\downtik\\out1.png'))
     time.sleep(1)
     # Load lại trang tải
-    find_and_click(make_path('img\\downreel\\reload.png'))
+    find_and_click(make_path('img\\downtik\\out2.png'))
     time.sleep(1)
     # Chuyển tới tab Reel
-    find_and_click(make_path('img\\downreel\\fb.png'))
+    find_and_click(make_path('img\\downtik\\tik.png'))
     time.sleep(1)
+    pyautogui.click(x=500, y=500)
+    time.sleep(1)
+    pyautogui.press('down')
+    time.sleep(1)
+
 
