@@ -55,7 +55,7 @@ while True:
     # Chuyển tới tab Reel
     find_and_click(make_path('img\\downtik\\tik.png'))
     time.sleep(1)
-    pyautogui.click(x=500, y=500)
+    pyautogui.click(x=700, y=600)
     time.sleep(1)
     pyautogui.press('down')
     time.sleep(1)
