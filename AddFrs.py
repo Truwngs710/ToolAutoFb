@@ -29,7 +29,7 @@ def auto_click_on_centers(centers):
     for center in centers:
         pyautogui.moveTo(center[0], center[1])
         pyautogui.click()
-        time.sleep(random.choice([0.75, 1.5, 2.25]))
+        time.sleep(random.choice([13.75, 6.5, 10.25]))
         detect_ok_btn()
         detect_x_btn()
         time.sleep(1)

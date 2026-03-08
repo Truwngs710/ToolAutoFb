@@ -29,36 +29,36 @@ def find_and_click(image_path, confidence=0.97):
 while True:
     
     # next reel
-    time.sleep(1)
-    pyautogui.click(x=1500, y=500)
+    time.sleep(2)
+    pyautogui.click(x=1500, y=800)
     time.sleep(2)
 
     # lấy URL
     find_and_click(make_path('img\\downreel\\link.png'))
-    time.sleep(1)
+    time.sleep(2)
     pyautogui.hotkey('ctrl', 'c')
-    time.sleep(1)
+    time.sleep(2)
 
     # Chuyển tới tab download
     find_and_click(make_path('img\\downreel\\downloadweb.png'))
-    time.sleep(1)
+    time.sleep(2)
 
     # Nhập URL và tải video
     find_and_click(make_path('img\\downreel\\input.png'))
-    time.sleep(1)
+    time.sleep(2)
     pyautogui.hotkey('ctrl', 'v')
-    time.sleep(1)
+    time.sleep(2)
 
     find_and_click(make_path('img\\downreel\\download.png'))
-    time.sleep(6)
+    time.sleep(12)
     find_and_click(make_path('img\\downreel\\dow.png'))
-    time.sleep(1)
+    time.sleep(4)
     find_and_click(make_path('img\\downreel\\closeads.png'))
-    time.sleep(1)
+    time.sleep(2)
     # Load lại trang tải
     find_and_click(make_path('img\\downreel\\reload.png'))
-    time.sleep(1)
+    time.sleep(2)
     # Chuyển tới tab Reel
     find_and_click(make_path('img\\downreel\\fb.png'))
-    time.sleep(1)
+    time.sleep(2)
 

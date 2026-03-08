@@ -26,8 +26,12 @@ def find_and_click(image_path, confidence=0.97):
         print("Not found {}".format(filename))
         return False
     
-while True:
-    # lấy URL
+# ====== THỜI GIAN CHẠY ======
+start_time = time.time()
+run_time = 5 * 60  # 5 phút = 300 giây
+
+while time.time() - start_time < run_time:
+    
     find_and_click(make_path('img\\downtik\\link.png'))
     time.sleep(1)
     pyautogui.hotkey('ctrl', 'c')
